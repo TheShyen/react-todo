@@ -17,7 +17,7 @@ const Todo = ({
             <span>
                 <Checkbox 
                     icon={<RadioButtonUncheckedIcon />} 
-                    checkedIcon={<CheckCircleOutlineIcon />} 
+                    checkedIcon={<CheckCircleOutlineIcon color = 'primary'/>} 
                     onClick = {(e) => handleMarkTodo(e.target.checked, index)}
                     checked = {todo.isFinished}
                 />

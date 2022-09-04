@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
@@ -35,6 +35,9 @@ const TodoRender = ({
     handleMarkTodo,
     handleOpenTodo
 }) => {
+    useEffect(() => {
+        localStorage.setItem('items', JSON.stringify(todos), [todos])
+    })
     return (
         <div className='todos-renderer-wrapper'>
             {todos.map((todo, index) => (

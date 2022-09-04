@@ -35,7 +35,9 @@ const Todo = () => {
   const [tab, setTab] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenDisplayTodo, setisOpenDisplayTodo] = useState(false);
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(
+    JSON.parse(localStorage.getItem('items')) || []
+  );
   const [formData, SetFormData] = useState(initialFormData);
 
   const totalCount = getIsFinishedTodosCount(todos);

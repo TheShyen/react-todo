@@ -11,6 +11,11 @@
     z-index: 999;
     right: 25px;
     bottom: -25px;
+    cursor: pointer;
+}
+.add-todo svg:hover{
+    color: rgb(11, 237, 226);
+    transition: 0.6s all
 }
 
 .icon-background {

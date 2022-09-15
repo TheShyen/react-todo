@@ -24,7 +24,7 @@ const Todo = ({
             </span>
 
             <div className='todo-item' onClick={() => handleOpenTodo({...todo, index})}>
-                <span className={isFinishedTodo}>{todo.todoName}</span>
+                <span className={isFinishedTodo}>{todo.todoName || todo.todoNote}</span>
                 <ArrowForwardIosIcon fontSize='small'/>
             </div>
         </div>

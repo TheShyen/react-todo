@@ -25,6 +25,8 @@ const DialogModal = ({
                         variant = 'outlined'
                         onChange = {(e) => {handleSetFieldValue('todoName', e.target.value)}}
                         value = {formData.todoName}
+                        inputProps = {{maxLength: 50}}
+                        multiline = 'true'
                     />
 
                     <TextField 
@@ -37,7 +39,7 @@ const DialogModal = ({
                     />
                     <DialogActions>
                         <Button color = 'primary' onClick = {handleOpenDialog}>Close</Button>
-                        <Button disabled = {!formData.todoName} type = 'submit' color = 'primary'>{formData.isEdit ? 'Edit' : 'Add'}</Button>
+                        <Button disabled = {!(formData.todoName ||formData.todoNote)} type = 'submit' color = 'primary'>{formData.isEdit ? 'Edit' : 'Add'}</Button>
                     </DialogActions>
                 </form>
             </DialogContent>

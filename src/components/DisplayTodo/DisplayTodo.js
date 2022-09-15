@@ -4,6 +4,11 @@ import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
 import Button from '@mui/material/Button';
+import Divider from '@mui/material/Divider';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
 import './DisplayTodo.css';
 
 const DisplayTodo = ({
@@ -21,8 +26,19 @@ const DisplayTodo = ({
 
             <DialogContent>
                 <div>
-                    <h2>{formData.todoName}</h2>
-                    <div>{formData.todoNote}</div>
+                    <Card sx={{ marginTop: 1}}>
+                        
+                            <CardContent >
+                                <Typography gutterBottom variant="h5" component="div" sx={{wordWrap: 'break-word'}}>
+                                    {formData.todoName}
+                                </Typography>
+                                <Divider/>
+                                <Typography variant="body1" color="text.secondary" sx={{wordWrap: 'break-word'}}>
+                                    {formData.todoNote}
+                                </Typography>
+                            </CardContent>
+                        
+                    </Card>
                 </div>
             </DialogContent>
 
